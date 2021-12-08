@@ -7,11 +7,13 @@ class Player
       # Assignez la valeur d'entrée du joueur à la variable "input_hand".
       # Astuce : regardez la méthode gets.
       input_hand = gets.to_i
+      puts "Vous avez saisie : #{input_hand}"
       # Si "input_hand" est l'un de "0, 1, 2", le processus d'itération est terminé, sinon (y compris les caractères alphabétiques), le processus d'itération est poursuivi.
       while input_hand != 0 && input_hand != 1 && input_hand != 2
         puts "Please enter a number between 0-2."
         puts "0 : Goo\n1 : Choki\n2 : Par"
         input_hand = gets.to_i
+        puts "Vous avez saisie : #{input_hand}"
         # si "input_hand" est un de "0, 1, 2".
         # Astuce : regardez la méthode include ?
           # retourner "input_hand" tel quel.
