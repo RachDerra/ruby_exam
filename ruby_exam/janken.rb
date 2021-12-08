@@ -2,18 +2,22 @@
 class Player
     def hand
       # Affichez un texte demandant au joueur de choisir un mouvement de pierre-papier-ciseaux.
-      puts "Please enter a number between 0-2."
-      puts "0 : Goo\n1 : Choki\n2 : Par"
+      # puts "Please enter a number between 0-2."
+      # puts "0 : Goo\n1 : Choki\n2 : Par"
       # Assignez la valeur d'entrée du joueur à la variable "input_hand".
       # Astuce : regardez la méthode gets.
-      input_hand = gets.to_i
-      puts "Vous avez saisie : #{input_hand}"
+      # input_hand = gets.to_i
+      # puts "Vous avez saisie : #{input_hand}"
       # Si "input_hand" est l'un de "0, 1, 2", le processus d'itération est terminé, sinon (y compris les caractères alphabétiques), le processus d'itération est poursuivi.
-      while input_hand != 0 && input_hand != 1 && input_hand != 2
+      while true
+          # input_hand != 0 && input_hand != 1 && input_hand != 2
         puts "Please enter a number between 0-2."
         puts "0 : Goo\n1 : Choki\n2 : Par"
-        input_hand = gets.to_i
-        puts "Vous avez saisie : #{input_hand}"
+        input_hand = gets.chomp
+        if input_hand === "0" || input_hand === "1" || input_hand === "2"
+          return input_hand.to_i
+        end
+        # puts "Vous avez saisie : #{input_hand}"
         # si "input_hand" est un de "0, 1, 2".
         # Astuce : regardez la méthode include ?
           # retourner "input_hand" tel quel.
@@ -25,9 +29,7 @@ class Player
           # Assignez la valeur d'entrée du joueur à la variable "input_hand".
         # fin de l'instruction if fin
       end
-      return input_hand
     end
-
   end
   # Ecrire la logique pour que l'autre partie génère aléatoirement une valeur de "0~2".
   class Enemy
