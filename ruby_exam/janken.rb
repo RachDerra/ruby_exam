@@ -14,7 +14,7 @@ class Player
         puts "Please enter a number between 0-2."
         puts "0 : Goo\n1 : Choki\n2 : Par"
         input_hand = gets.chomp
-        if input_hand === "0" || input_hand === "1" || input_hand === "2"
+        if input_hand == "0" || input_hand == "1" || input_hand == "2"
           return input_hand.to_i
         end
         # puts "Vous avez saisie : #{input_hand}"
